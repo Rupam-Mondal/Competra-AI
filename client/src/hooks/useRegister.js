@@ -1,6 +1,6 @@
 import { ResgisterUser } from "@/apis/auth/auth"
 
-export function useUserRegister(UserObject){
+export function useUserRegister(){
     const {isPending, isSuccess, error, mutateAsync} = useMutation({
         mutationFn:ResgisterUser,
         onSuccess: (data) => {
