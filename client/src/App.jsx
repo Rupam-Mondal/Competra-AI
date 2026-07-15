@@ -1,12 +1,20 @@
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
 import './App.css'
-import Routing from './Routes/Routing'
+import Routing from './Routes/Routing';
 
 function App() {
+
+  const queryClient = new QueryClient();
   
 
   return (
     <>
-      <Routing/>
+      <QueryClientProvider client={queryClient}>
+        <Routing/>
+      </QueryClientProvider>
     </>
   )
 }
