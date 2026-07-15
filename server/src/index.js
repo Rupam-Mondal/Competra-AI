@@ -1,4 +1,6 @@
 import express from 'express';
+import cors from 'cors';
+import ConnectDb from './config/dbConfig.js';
 
 const app = express();
 
@@ -7,5 +9,6 @@ app.use(express.urlencoded({extended:true}));
 app.use(cors());
 
 app.listen(3000 , () => {
-    console.log("Server is running")
+    console.log("Server is running");
+    ConnectDb();
 })
