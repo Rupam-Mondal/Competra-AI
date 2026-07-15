@@ -1,13 +1,12 @@
-import { useState } from 'react'
-
 import './App.css'
+import Routing from './Routes/Routing'
 
 function App() {
   
 
   return (
     <>
-      <div className='bg-red-400'>Hi</div>
+      <Routing/>
     </>
   )
 }
